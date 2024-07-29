@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            .cantainer{
+                background-color: rgb(255, 255, 255);
+                width:400px;
+                height:650px;
+                margin: 50px;
+                border: 2px solid rgb(250, 250, 250);
+                box-shadow: 0px 0px 25px white;
+                border-radius:5px;
+            }
+            h1{
+                color:white;
+                font-style:italic;
+                font-weight:bold;
+                font-size: 75px;
+                margin: 0px;
+            
+            }
+            .button{
+                background-color: white;
+                color:black;
+                width:80px;
+                height:80px;
+                margin: 5px;
+                border:3px solid black;
+                border-radius: 5px;
+                font-size: 25px;
+                box-shadow: 0px 0px 5px black;
+
+                
+            }
+            input[type="text"]{
+                background: transparent;
+                width: 350px;
+                height:80px;
+                border: 2px solid black;
+                border-radius:5px;
+                margin: 10px;
+                font-size:70px ;
+                color:black;
+            }
+            .del{
+                background-color: white;
+                color:black;
+                width:180px;
+                height:80px;
+                margin: 5px;
+                border:3px solid black;
+                border-radius: 5px;
+                font-size: 25px;
+                box-shadow: 0px 0px 5px black;
+
+            }
+            .addition{
+                background-color: white;
+                color:black;
+                width:180px;
+                height:80px;
+                margin: 5px;
+                border:3px solid black;
+                border-radius: 5px;
+                font-size: 25px;
+                box-shadow: 0px 0px 5px black;
+            }
+            .equal{
+                background-color: white;
+                color:black;
+                width:375px;
+                height:80px;
+                margin: 5px;
+                border:3px solid black;
+                border-radius: 5px;
+                font-size: 25px;
+                box-shadow: 0px 0px 5px black;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Calculator</h1>
+            <div class="cantainer">
+                <div class="calculator">
+                   <form>
+                    <div>
+                       <input type="text" name="display" value=" " disabled>
+                    </div>
+                    <div>
+                        <input type="button" value="AC"   onclick="display.value = ' '"  class="button">
+                        <input type="button" value="."    onclick="display.value += '.'" class="button">
+                        <input type="button" value="del"  onclick="display.value = display.value.toString().slice(0,-1)" class="del">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7'" class="button">
+                        <input type="button" value="8" onclick="display.value += '8'" class="button">
+                        <input type="button" value="9" onclick="display.value += '9'" class="button">
+                        <input type="button" value="/" onclick="display.value += '/'" class="button">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4'" class="button">
+                        <input type="button" value="5" onclick="display.value += '5'" class="button">
+                        <input type="button" value="6" onclick="display.value += '6'" class="button">
+                        <input type="button" value="*" onclick="display.value += '*'" class="button">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1'" class="button">
+                        <input type="button" value="2" onclick="display.value += '2'" class="button">
+                        <input type="button" value="3" onclick="display.value += '3'" class="button">
+                        <input type="button" value="-" onclick="display.value += '-'" class="button">
+                    </div>
+                     <div>
+                        <input type="button" value="0"  onclick="display.value += '0'" class="button">
+                        <input type="button" value="00" onclick="display.value += '00'" class="button">
+                        <input type="button" value="+"  onclick="display.value += '+'" class="addition">
+                    </div>
+                    <div>
+                        <input type="button" value="="  onclick="display.value = eval(display.value)" class="equal" >
+                    </div>
+                   </form>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
